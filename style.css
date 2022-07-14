@@ -17,8 +17,8 @@ label,input{
     margin: 1rem;
     margin: 1rem;
 }
-input:focus {
-    -webkit-text-size-adjust: none;
+input[text]:focus, input[number]:focus {
+    -webkit-text-size-adjust: 100%;
 }
 
 @media screen and (max-width:600px) {
