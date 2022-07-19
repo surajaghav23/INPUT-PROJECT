@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script >
+        var iOS = navigator.platform && /iPhone/.test(navigator.platform);
+        if (iOS)
+        document.head.querySelector('meta[name="viewport"]').content = "width=device-width, initial-scale=1, maximum-scale=1";
+        else
+        document.head.querySelector('meta[name="viewport"]').content = "width=device-width, initial-scale=1";
+    </script>
     <title>Input app</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,12 +27,6 @@
         
         <input type="submit" value="Submit">
     </form>
-    <script src="app.js">
-        var iOS = navigator.platform && /iPhone/.test(navigator.platform);
-        if (iOS)
-        document.head.querySelector('meta[name="viewport"]').content = "width=device-width, initial-scale=1, maximum-scale=1";
-        else
-        document.head.querySelector('meta[name="viewport"]').content = "width=device-width, initial-scale=1";
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
